@@ -1,0 +1,65 @@
+actions_dict:
+  action_end: 18
+  action_start: 17
+  add_dressing: 14
+  add_oil: 8
+  add_pepper: 9
+  add_salt: 6
+  add_vinegar: 7
+  cut_cheese: 2
+  cut_cucumber: 12
+  cut_lettuce: 4
+  cut_tomato: 0
+  mix_dressing: 10
+  mix_ingredients: 15
+  peel_cucumber: 11
+  place_cheese_into_bowl: 3
+  place_cucumber_into_bowl: 13
+  place_lettuce_into_bowl: 5
+  place_tomato_into_bowl: 1
+  serve_salad_onto_plate: 16
+averaging_method: min
+batch_size: 8
+beta: 20
+checkpoint: null
+confidence_weight: 0.075
+data_root_dir: /mnt/disks/tempseg/data/data
+dataset: 50salads
+dataset_root: /mnt/disks/tempseg/data/data/50salads
+description: ''
+device: !!python/object/apply:torch.device
+- cuda
+- 3
+dump_log: true
+eval_interval: 2
+exp_dir: /experiments/50salads_split1
+exp_name: 50salads_split1
+exp_root: /experiments
+features_dim: 2048
+features_path: /mnt/disks/tempseg/data/data/50salads/features
+gamma: 0.001
+gpu_num: 3
+gt_path: /mnt/disks/tempseg/data/data/50salads/groundTruth
+i3d_based_laplacian: false
+ignore_index: -100
+lr: 0.0005
+num_classes: 19
+num_epochs: 60
+num_f_maps: 64
+num_layers: 10
+num_neighbors: 30
+num_stages: 4
+num_workers: 4
+sample_rate: 2
+seed: 42
+sharpening_method: exp
+similarity_method: euclidean
+smooth: 10
+smoothness_loss_name: laplace
+smoothness_weight: 0.075
+split: '1'
+start_epochs: 30
+supervised_loss_name: random_walk
+test_videos_list: /mnt/disks/tempseg/data/data/50salads/splits/test.split1.bundle
+train_videos_list: /mnt/disks/tempseg/data/data/50salads/splits/train.split1.bundle
+weight_decay: 0.0

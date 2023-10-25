@@ -1,0 +1,57 @@
+actions_dict:
+  background: 10
+  close: 3
+  fold: 8
+  open: 1
+  pour: 2
+  put: 7
+  scoop: 5
+  shake: 4
+  spread: 9
+  stir: 6
+  take: 0
+averaging_method: min
+batch_size: 8
+beta: 30
+checkpoint: null
+confidence_weight: 0.1
+data_root_dir: /mnt/disks/tempseg/data/data
+dataset: gtea
+dataset_root: /mnt/disks/tempseg/data/data/gtea
+description: ''
+device: !!python/object/apply:torch.device
+- cuda
+- 3
+dump_log: true
+eval_interval: 2
+exp_dir: /experiments/gtea_split1
+exp_name: gtea_split1
+exp_root: /experiments
+features_dim: 2048
+features_path: /mnt/disks/tempseg/data/data/gtea/features
+gamma: 0.0001
+gpu_num: 3
+gt_path: /mnt/disks/tempseg/data/data/gtea/groundTruth
+i3d_based_laplacian: false
+ignore_index: -100
+lr: 0.0005
+num_classes: 11
+num_epochs: 70
+num_f_maps: 64
+num_layers: 10
+num_neighbors: 15
+num_stages: 4
+num_workers: 4
+sample_rate: 1
+seed: 42
+sharpening_method: power
+similarity_method: cosine
+smooth: 10
+smoothness_loss_name: laplace
+smoothness_weight: 0.15
+split: '1'
+start_epochs: 30
+supervised_loss_name: random_walk
+test_videos_list: /mnt/disks/tempseg/data/data/gtea/splits/test.split1.bundle
+train_videos_list: /mnt/disks/tempseg/data/data/gtea/splits/train.split1.bundle
+weight_decay: 5.0e-05
